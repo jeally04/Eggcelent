@@ -5,7 +5,6 @@ import {
   Animated,
   StyleSheet,
   Dimensions,
-  StatusBar,
 } from 'react-native';
 import { LinearGradient } from 'expo-linear-gradient';
 import COLORS from '../../constants/colors';
@@ -27,7 +26,6 @@ const SplashScreen = ({ onFinish }) => {
   const dotsOpacity = useRef(new Animated.Value(0)).current;
 
   useEffect(() => {
-    StatusBar.setBarStyle('light-content');
 
     Animated.sequence([
       // 1. BG zoom in

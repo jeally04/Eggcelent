@@ -4,12 +4,10 @@
     "slug": "eggcelent",
     "version": "1.0.0",
     "orientation": "portrait",
-    "icon": "./assets/icon.png",
     "userInterfaceStyle": "light",
     "splash": {
-      "image": "./assets/splash.png",
-      "resizeMode": "contain",
-      "backgroundColor": "#FFF8F0"
+      "backgroundColor": "#C8340A",
+      "resizeMode": "contain"
     },
     "ios": {
       "supportsTablet": true,
@@ -17,16 +15,9 @@
     },
     "android": {
       "adaptiveIcon": {
-        "foregroundImage": "./assets/adaptive-icon.png",
-        "backgroundColor": "#FFF8F0"
+        "backgroundColor": "#C8340A"
       },
       "package": "com.eggcelent.app"
-    },
-    "web": {
-      "favicon": "./assets/favicon.png"
-    },
-    "plugins": [
-      "expo-splash-screen"
-    ]
+    }
   }
 }

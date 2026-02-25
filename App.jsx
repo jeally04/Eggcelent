@@ -1,4 +1,5 @@
-import React, { useState, useEffect } from 'react';
+import 'react-native-gesture-handler';
+import React, { useState } from 'react';
 import { View, StyleSheet } from 'react-native';
 import { NavigationContainer } from '@react-navigation/native';
 import { SafeAreaProvider } from 'react-native-safe-area-context';
@@ -11,12 +12,9 @@ import AuthNavigator from './src/navigation/AuthNavigator';
 import SplashScreen from './src/screens/SplashScreen';
 import COLORS from './src/constants/colors';
 
-// Root navigator — decides Auth vs App based on auth state
 const RootNavigator = ({ splashDone }) => {
   const { isAuthenticated, isLoading } = useAuth();
-
   if (!splashDone || isLoading) return null;
-
   return (
     <NavigationContainer>
       {isAuthenticated ? <AppNavigator /> : <AuthNavigator />}
@@ -26,7 +24,6 @@ const RootNavigator = ({ splashDone }) => {
 
 export default function App() {
   const [splashDone, setSplashDone] = useState(false);
-
   return (
     <GestureHandlerRootView style={styles.root}>
       <SafeAreaProvider>
@@ -47,8 +44,5 @@ export default function App() {
 }
 
 const styles = StyleSheet.create({
-  root: {
-    flex: 1,
-    backgroundColor: COLORS.background,
-  },
+  root: { flex: 1, backgroundColor: COLORS.background },
 });
