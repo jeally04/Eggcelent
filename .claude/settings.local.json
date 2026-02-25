@@ -1,0 +1,13 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(git -C /c/Eggcelent log --oneline -5)",
+      "Bash(npm install)",
+      "Bash(git push -u origin main)",
+      "Bash(git add src/constants/)",
+      "Bash(git commit:*)",
+      "Bash(git push)",
+      "Bash(git add src/context/)"
+    ]
+  }
+}
